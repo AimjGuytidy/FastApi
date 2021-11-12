@@ -11,14 +11,22 @@ class Post(BaseModel):
     published : bool = True
     rating : Optional[int] = None
 
+my_post = [{"title":"post 1","content":"this is the first post","id":1},{"title":"post 2","content":"this is the second post","id":2}]
+
 @app.get("/")
 async def root():
     return {"message":"Hello World!"}
 #min 47:35
 
+"""
 @app.get("/posts")
 async def get_posts():
     return {"data":"this is a post"}
+"""
+
+@app.get("/posts")
+async def get_posts():
+    return {"data":my_post}
 
 """
 @app.post("/createposts")
