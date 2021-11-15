@@ -59,3 +59,4 @@ def create_posts(post: Post):
 def get_post(id: int):
     posty = find_post(id)
     return {"data":posty}
+#1:48:12
